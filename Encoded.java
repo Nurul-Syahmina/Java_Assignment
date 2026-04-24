@@ -5,7 +5,7 @@ public class Encoded {
     private String resultText;
     private final String groupID = "G04/SE-G11";
 
-    // Constructors (Person 4) - test
+    // Constructors (Person 4)
     public Encoded() {}
 
     public Encoded(String inputText) {
