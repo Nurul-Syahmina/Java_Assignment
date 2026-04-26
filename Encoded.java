@@ -26,8 +26,8 @@ public class Encoded {
 
     // Shift logic (Person 2)
     public int generateShift() {
-        // (Person 2 can edit)
-        return 0;
+        int groupShift = Math.abs(groupID.hashCode()) % 10 + 1;
+        return groupShift;
     }
 
     // Encoding (Person 3)
