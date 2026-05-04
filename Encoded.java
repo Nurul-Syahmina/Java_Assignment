@@ -29,10 +29,36 @@ public class Encoded {
         int groupShift = Math.abs(groupID.hashCode()) % 10 + 1;
         return groupShift;
     }
+    
+// Encoding (Person 3)
+public String applyCipher(String inputText, int shift) {
+    // StringBuilder is used for efficient string concatenation
+    StringBuilder encoded = new StringBuilder();
 
-    // Encoding (Person 3)
-    public String applyCipher(String inputText, int shift) {
-        // (Person 3 can edit)
-        return "";
+    // Loop through each character in the input text
+    for (int i = 0; i < inputText.length(); i++) {
+        char c = inputText.charAt(i);
+
+        if (c >= 'a' && c <= 'z') {
+            // Encode lowercase letters:
+            // Convert 'a'-'z' to 0–25, add shift, wrap using %26, then convert back
+            char newChar = (char) ((c - 'a' + shift) % 26 + 'a');
+            encoded.append(newChar);
+
+        } else if (c >= '0' && c <= '9') {
+            // Encode digits:
+            // Convert '0'-'9' to 0–9, add shift, wrap using %10, then convert back
+            char newChar = (char) ((c - '0' + shift) % 10 + '0');
+            encoded.append(newChar);
+
+        } else if (c == ' ') {
+            // Spaces remain unchanged as per encoding rules
+            encoded.append(c);
+        }
     }
+
+    // Return the fully encoded string after processing all characters
+    return encoded.toString();
+}
+    
 }
