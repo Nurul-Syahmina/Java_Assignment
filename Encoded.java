@@ -14,14 +14,36 @@ public class Encoded {
 
     // Validation (Person 1)
     public boolean checkStringValidity(String inputText) {
-        // (Person 1 can edit)
-        return false;
+        if (inputText == null || inputText.length() == 0) {
+            return false;
+        }
+
+        for (int i = 0; i < inputText.length(); i++) {
+            char c = inputText.charAt(i);
+
+            boolean isLowercase = (c >= 'a' && c <= 'z');
+            boolean isDigit = (c >= '0' && c <= '9');
+            boolean isSpace = (c == ' ');
+
+            if (!isLowercase && !isDigit && !isSpace) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // Count (Person 1)
     public int countCharacters(String inputText) {
-        // (Person 1 can edit)
-        return 0;
+        int count = 0;
+
+        for (int i = 0; i < inputText.length(); i++) {
+            if (inputText.charAt(i) != ' ') {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     // Shift logic (Person 2)
