@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-// Person 4 - Main class: builds GUI and connects all encoding logic
+// Contributed by Syahmina - Main class: builds GUI and connects all encoding logic
 public class Assignment {
 
     public static void main(String[] args) {
