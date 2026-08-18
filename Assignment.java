@@ -8,7 +8,7 @@ public class Assignment {
     public static void main(String[] args) {
 
         // Set up the frame
-        JFrame frame = new JFrame("Group 11 - String Encoder");
+        JFrame frame = new JFrame("Group 11 - String Encoder (Testing)");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(450, 400);
         frame.setLocationRelativeTo(null); // centre on screen
